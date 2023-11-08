@@ -1,0 +1,157 @@
+.screen {
+  position: relative;
+  background: #fefefe;
+  border-radius: 15px;
+}
+
+.screen_body {
+  display: flex;
+}
+
+.screen_body_item {
+  flex: 1;
+  padding: 50px 50px;
+}
+
+.screen_body_item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app_title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #ff8d55;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.app_title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: #ff8d55;
+}
+
+.app_contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #888;
+}
+
+.app_form_group {
+  margin-bottom: 15px;
+}
+
+.app_form_group.message {
+  margin-top: 40px;
+}
+
+.app_form_group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app_form_control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #181818;
+  color: #181818;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.app_form_control::placeholder {
+  color: #181818;
+}
+
+.app_form_control:focus {
+  outline: none;
+}
+
+.app_form_button {
+  padding: 8px 25px;
+  width: max-content;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  color: #181818;
+  border: 1px solid #181818;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.app_form_button:hover {
+  box-shadow: inset 150px 0 0 #ff8d55;
+  border: 1px solid #ff8d55;
+  color: #fff;
+}
+
+.map_sec {
+  padding: 50px 0px;
+}
+
+.map_inner h4,
+.map_inner p {
+  color: #000;
+  text-align: center;
+}
+
+.map_inner p {
+  font-size: 13px;
+}
+
+.map_bind {
+  margin-top: 50px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 991px) {
+  .screen_body_item {
+    flex: 1;
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .screen_body {
+    flex-direction: column;
+  }
+
+  .screen_bod_item.left {
+    margin-bottom: 15px;
+  }
+
+  .app_title {
+    flex-direction: row;
+  }
+
+  .apptitle span {
+    margin-right: 12px;
+  }
+
+  .app_title:after {
+    display: none;
+  }
+  .screen_body {
+    padding: 40px 0;
+  }
+
+  .map_sec {
+    padding: 6px 0;
+  }
+  .screen_body_item {
+    padding: 0;
+  }
+}
